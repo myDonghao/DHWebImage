@@ -17,4 +17,12 @@
  */
 + (instancetype)shareManager;
 
+/**
+ *  通过图片地址下载图片,并通过block回调的方式将图片传回
+ *
+ *  @param urlString   <#urlString description#>
+ *  @param compeletion <#compeletion description#>
+ */
+- (void)downloadImageWithUrlString:(NSString *)urlString compeletion:(void(^)(UIImage *))compeletion;
+
 @end
