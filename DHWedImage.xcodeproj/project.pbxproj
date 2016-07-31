@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064530A01D4E221200BD7268 /* DHAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645309F1D4E221200BD7268 /* DHAppInfo.m */; };
+		064530A31D4E27DD00BD7268 /* DHAppInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 064530A21D4E27DD00BD7268 /* DHAppInfoCell.m */; };
+		064530A61D4E2DEB00BD7268 /* DHDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 064530A51D4E2DEB00BD7268 /* DHDownloadOperation.m */; };
+		0645AEAF1D4DF9D90068ED36 /* DHDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0645AEAE1D4DF9D90068ED36 /* DHDownloadManager.m */; };
 		06904D9B1D4DD4F8004B0511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06904D9A1D4DD4F8004B0511 /* main.m */; };
 		06904DA11D4DD4F8004B0511 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06904DA01D4DD4F8004B0511 /* ViewController.m */; };
 		06904DA41D4DD4F8004B0511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06904DA21D4DD4F8004B0511 /* Main.storyboard */; };
@@ -39,6 +43,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0645309E1D4E221200BD7268 /* DHAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAppInfo.h; sourceTree = "<group>"; };
+		0645309F1D4E221200BD7268 /* DHAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAppInfo.m; sourceTree = "<group>"; };
+		064530A11D4E27DD00BD7268 /* DHAppInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAppInfoCell.h; sourceTree = "<group>"; };
+		064530A21D4E27DD00BD7268 /* DHAppInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAppInfoCell.m; sourceTree = "<group>"; };
+		064530A41D4E2DEB00BD7268 /* DHDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHDownloadOperation.h; sourceTree = "<group>"; };
+		064530A51D4E2DEB00BD7268 /* DHDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDownloadOperation.m; sourceTree = "<group>"; };
+		0645AEAD1D4DF9D90068ED36 /* DHDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHDownloadManager.h; sourceTree = "<group>"; };
+		0645AEAE1D4DF9D90068ED36 /* DHDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHDownloadManager.m; sourceTree = "<group>"; };
 		06904D961D4DD4F8004B0511 /* DHWedImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHWedImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06904D9A1D4DD4F8004B0511 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06904D9F1D4DD4F8004B0511 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -135,6 +147,10 @@
 				06904DB31D4DD6F7004B0511 /* Other */,
 				06904D9F1D4DD4F8004B0511 /* ViewController.h */,
 				06904DA01D4DD4F8004B0511 /* ViewController.m */,
+				064530A11D4E27DD00BD7268 /* DHAppInfoCell.h */,
+				064530A21D4E27DD00BD7268 /* DHAppInfoCell.m */,
+				0645309E1D4E221200BD7268 /* DHAppInfo.h */,
+				0645309F1D4E221200BD7268 /* DHAppInfo.m */,
 				06904DA21D4DD4F8004B0511 /* Main.storyboard */,
 				06904DA51D4DD4F8004B0511 /* Assets.xcassets */,
 				06904DA71D4DD4F8004B0511 /* LaunchScreen.storyboard */,
@@ -155,6 +171,10 @@
 		06904DB01D4DD6F7004B0511 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0645AEAD1D4DF9D90068ED36 /* DHDownloadManager.h */,
+				0645AEAE1D4DF9D90068ED36 /* DHDownloadManager.m */,
+				064530A41D4E2DEB00BD7268 /* DHDownloadOperation.h */,
+				064530A51D4E2DEB00BD7268 /* DHDownloadOperation.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -280,6 +300,7 @@
 		06904D8E1D4DD4F8004B0511 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DH;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = dongHao;
 				TargetAttributes = {
@@ -330,6 +351,7 @@
 				06904DFB1D4DD72D004B0511 /* UIImageView+WebCache.m in Sources */,
 				06904DCA1D4DD718004B0511 /* AFURLSessionManager.m in Sources */,
 				06904DF31D4DD72D004B0511 /* SDWebImageDownloaderOperation.m in Sources */,
+				0645AEAF1D4DF9D90068ED36 /* DHDownloadManager.m in Sources */,
 				06904DF41D4DD72D004B0511 /* SDWebImageManager.m in Sources */,
 				06904DB61D4DD6F7004B0511 /* AppDelegate.m in Sources */,
 				06904DA11D4DD4F8004B0511 /* ViewController.m in Sources */,
@@ -345,12 +367,15 @@
 				06904DF61D4DD72D004B0511 /* UIButton+WebCache.m in Sources */,
 				06904DC71D4DD718004B0511 /* AFSecurityPolicy.m in Sources */,
 				06904DEF1D4DD72D004B0511 /* SDImageCache.m in Sources */,
+				064530A61D4E2DEB00BD7268 /* DHDownloadOperation.m in Sources */,
 				06904DC81D4DD718004B0511 /* AFURLRequestSerialization.m in Sources */,
 				06904DC91D4DD718004B0511 /* AFURLResponseSerialization.m in Sources */,
+				064530A01D4E221200BD7268 /* DHAppInfo.m in Sources */,
 				06904DC51D4DD718004B0511 /* AFHTTPSessionManager.m in Sources */,
 				06904DF71D4DD72D004B0511 /* UIImage+GIF.m in Sources */,
 				06904DEE1D4DD72D004B0511 /* NSData+ImageContentType.m in Sources */,
 				06904DF91D4DD72D004B0511 /* UIImage+WebP.m in Sources */,
+				064530A31D4E27DD00BD7268 /* DHAppInfoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +524,7 @@
 				06904DAF1D4DD4F8004B0511 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
