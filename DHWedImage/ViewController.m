@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "DHAppInfo.h"
 #import "DHAppInfoCell.h"
+#import "DHDownloadManager.h"
 
 @interface ViewController ()
 /**
@@ -50,6 +51,13 @@
     cell.downloadLabel.text = info.download;
     
     
+    // 下载图片
+    [[DHDownloadManager shareManager] downloadImageWithUrlString:info.icon compeletion:^(UIImage *image) {
+        
+        cell.iconView.image = image;
+        
+    }];
+    
     return cell;
 }
 
@@ -87,6 +95,10 @@
         NSLog(@"请求失败: %@",error);
         
     }];
+    
+    
+    
+    
 }
 
 #pragma mark - 懒加载

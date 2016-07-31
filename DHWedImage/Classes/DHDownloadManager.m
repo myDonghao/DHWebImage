@@ -8,6 +8,7 @@
 
 #import "DHDownloadManager.h"
 #import "DHDownloadOperation.h"
+#import "NSString+path.h"
 
 @interface DHDownloadManager ()
 /**
@@ -61,6 +62,36 @@
     // 断言
     NSAssert(compeletion != nil, @"必须传入回调的block");
     
+    
+    // 判断内存中有没有
+    UIImage *cacheImage = self.imageCache[urlString];
+    
+    if (cacheImage != nil) {
+        NSLog(@"从内存中区");
+        // 如果有直接用block回调图片
+        compeletion(cacheImage);
+        return;
+    }
+    
+    // 判断沙盒中有么有
+    
+    // 取到沙盒的路径
+    NSString *path = [urlString appendCachePath];
+    
+    cacheImage = [UIImage imageWithContentsOfFile:path];
+    
+    if (cacheImage != nil) {
+        NSLog(@"从沙盒中取");
+        // 如果有,就直接将图片通过block回调出
+        compeletion(cacheImage);
+        
+        // 将图片缓存到内存中
+        [self.imageCache setObject:cacheImage forKey:urlString];
+        
+        return;
+    }
+    
+    
     // 判断操作有没有
     if (self.operationCache[urlString] != nil) {
         NSLog(@"操作已经存在,代表正在下载中....");
@@ -74,7 +105,7 @@
     [op setCompletionBlock:^{
         
         // 取到图片
-        UIImage *image = op.image;
+        UIImage *image = weakSelf.image;
         
         // 回到主线程中调用,将image传出去
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
